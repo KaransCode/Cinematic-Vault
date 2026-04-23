@@ -33,8 +33,11 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL
 );
 
+Select * from users;
+
 -- 2. Insert a default user so you can log in immediately
 INSERT INTO users (username, password) VALUES ('karan', 'admin123');
+INSERT INTO users (username, password) VALUES ('vishal', 'admin123');
 INSERT INTO users (username, password) VALUES ('the_boys_admin', 'project123');
 
 -- 3. Update the movies table
@@ -47,5 +50,3 @@ ALTER TABLE movies ADD CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users
 
 
 SELECT title, poster_url FROM movies;
-
-
